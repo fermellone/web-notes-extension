@@ -1,5 +1,5 @@
 import { makeMoveable } from '../../libs/svelteMovaeble/makeElementMoveable';
-import { makeResizable } from '../../libs/svelteMovaeble/makeElementResizable';
+// import { makeResizable } from '../../libs/svelteMovaeble/makeElementResizable';
 
 export function addSquare(event) {
 
@@ -11,7 +11,7 @@ export function addSquare(event) {
     square.style.alignItems = "start";
     square.style.width = "100px";
     square.style.height = "100px";
-    square.style.position = "fixed";
+    square.style.position = "relative";
     square.style.top = `${event.clientY}px`;
     square.style.left = `${event.clientX}px`;
     square.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
@@ -24,11 +24,16 @@ export function addSquare(event) {
     });
 
     var content = document.getElementById("content");
+
+
     makeMoveable(square, {
         onEnd(event) {
             console.log(event);
         }
     });
-    makeResizable(event);
+
+    // makeResizable(event);
+
+
     content.appendChild(square);
 }
