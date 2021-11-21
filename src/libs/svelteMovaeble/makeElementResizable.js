@@ -11,6 +11,9 @@ export function makeResizable(element) {
     const frame = {
         translate: [0, 0],
     };
+
+    console.log("makeResizable");
+    
     moveable.on("resizeStart", e => {
         // Set origin if transform-origin use %.
         e.setOrigin(["%", "%"]);

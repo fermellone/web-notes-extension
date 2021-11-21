@@ -1,4 +1,5 @@
-import { makeMoveable } from '../../helpers/makeElementMoveable'
+import { makeMoveable } from '../../libs/svelteMovaeble/makeElementMoveable';
+import { makeResizable } from '../../libs/svelteMovaeble/makeElementResizable';
 
 export function addSquare(event) {
 
@@ -28,5 +29,6 @@ export function addSquare(event) {
             console.log(event);
         }
     });
+    makeResizable(event);
     content.appendChild(square);
 }
