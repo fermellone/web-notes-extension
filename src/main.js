@@ -1,6 +1,7 @@
 import App from './App.svelte';
 
-import './styles/main.css'
+// styles
+import './utils/classes/boxes.css';
 
 const app = new App({
 	target: document.body,
