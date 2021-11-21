@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": ["https://*/*"],
-      "js": ["build/injection.js"]
+      "js": ["build/injection.js"],
+      "css": ["build/bundle.css"]
     }
   ]
 }
